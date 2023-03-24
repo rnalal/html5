@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지 팝업</title>
+    <script>
+        function imgData(){
+            url = location.href;
+            const pos = url.indexOf("?");
+            var loc = url.substring(pos+5, url.length);
+            document.getElementById("img1").setAttribute("src", loc);
+        }
+    </script>
+</head>
+<body onload="imgData()">
+    <img alt="" id="img1" width="480" height="690">
+</body>
+</html>

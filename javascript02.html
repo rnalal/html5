@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <h2>관련 사이트로 이동</h2>
+    <hr>  
+    <select name="potal" id="potal" onchange="pageLink(this)">
+        <option value="">-- 포털사이트 --</option>
+        <option value="https://www.naver.com">네이버</option>
+        <option value="https://www.daum.net">다음</option>
+        <option value="https://www.goole.com">구글</option>
+    </select>
+    -
+    <select name="page" id="page" onchange="pageLink(this)">
+        <option value="">-- 페이지 이동 --</option>
+        <option value="html01.html">문서1</option>
+        <option value="html02.html">문서2</option>
+        <option value="gtml03.html">문서3</option>
+    </select>
+    <hr>
+    <script>
+    //포털 사이트나 페이지 이동을 선택하였을 경우 해당 사이트나 페이지로 이동할 수 있도록 하되, 새 창으로 열어서 이동하게 할 것.
+
+     function pageLink(v){
+        if(v.value!=""){
+        window.open(v.value, "페이지로 이동");
+        }   
+    }
+    </script>
+</body>
+</html>

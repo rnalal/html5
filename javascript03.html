@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>팝업 창 띄우기</title>
+    <style>
+    li { line-height:60px; }
+    li .box { color:deepskyblue; font-weight:300; font-size:30px; cursor:pointer; }
+    li:hover .box { color:deeppink; font-weight:700; }    
+    </style>
+</head>
+<body>
+    <ul>
+        <li>
+            <div class="box" onclick="imgPop('bg1.webp')">
+                민영
+            </div>
+        </li>
+        <li>
+            <div class="box" onclick="imgPop('bg2.webp')">
+                유정
+            </div>
+        </li>
+        <li>
+            <div class="box" onclick="imgPop('bg3.webp')">
+                은지
+            </div>
+        </li>
+        <li>
+            <div class="box" onclick="imgPop('bg4.webp')">
+                유나
+            </div>
+        </li>
+    </ul>
+    <script>
+    //각 박스를 클릭하면,  새로운 창으로 해당 value 에 해당하는 이미지를 500x715 크기로 열되, 메뉴바, 툴바, 스크롤바 등은 표시할 말 것.
+        function imgPop(i){
+            window.open("pop.html?img="+i, "이미지","width=500, height=715, menubar=no, toolbar=no,scrollbars=no, status=no")
+        }
+    </script>
+</body>
+</html>
